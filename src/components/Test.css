@@ -1,0 +1,100 @@
+/* Scroll Design */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+  border: 1px solid #f5f5f5;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  box-shadow: inset 0 0 5px grey;
+}
+
+/* Table */
+.table-container {
+  margin: 20px 0 0 20px;
+  max-width: 547px;
+  max-height: 5470px;
+  border: 2px solid #bbbbbb;
+  overflow-y: scroll;
+}
+.scroll {
+  overflow-x: scroll;
+}
+.table-container table {
+  border-spacing: 0;
+}
+
+.table-container th {
+  position: sticky;
+  top: 0;
+  text-align: center;
+  background-color: rgb(140, 172, 140);
+  color: #000;
+  font-weight: normal;
+}
+
+.table-container td {
+  text-align: center;
+}
+
+/* No ve onun columnlari */
+.table-container th:nth-child(1),
+.table-container td:nth-child(1) {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  width: 50px;
+  min-width: 50px;
+  box-shadow: inset 0 0 0 1px #bbbbbb;
+}
+
+/* name, surname ve onun column'u */
+.table-container th:nth-child(2),
+.table-container td:nth-child(2) {
+  position: sticky;
+  left: 50px;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: inset 0 0 0 1px #bbbbbb;
+  width: 200px;
+  min-width: 200px;
+}
+/* No ve name,surname */
+.table-container th:nth-child(1),
+.table-container th:nth-child(2) {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  background-color: rgb(140, 172, 140);
+}
+/* No ve name,surname'nin columnlari */
+.table-container td:nth-child(1),
+.table-container td:nth-child(2) {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+/* h1 h2 h3 ve s.'nin columnlari */
+.table-container th:nth-child(n + 3),
+.table-container td:nth-child(n + 3) {
+  position: sticky;
+  padding: 20px;
+  z-index: 1;
+  box-shadow: inset 0 0 0 1px #bbbbbb;
+}
+
+/* h1 h2 h3 ve s.  */
+.table-container th:nth-child(n + 3) {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
